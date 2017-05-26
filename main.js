@@ -1,17 +1,19 @@
 var state = "Session";
 var stateSwitch = 1;
-var mainM=25;
-var pomoM=2;
-var m=mainM;
+var m=10;
 var s=1;
+var globalTimer = setInterval(mainTime, 1000);
 
 window.onload = function(){
-  document.getElementById("mainTime").innerHTML = mainM;
-  document.getElementById("pomoTime").innerHTML = pomoM;
+  document.getElementById("mainTime").innerHTML = 10;
+  document.getElementById("pomoTime").innerHTML = 5;
+  clearInterval(globalTimer);
 
 };
 
 function mainTime(){
+  var audio = new Audio('bell.mp3');
+
   s-=1;
   if(s<0){
     m-=1;
@@ -22,39 +24,41 @@ function mainTime(){
     if (stateSwitch===1){
       state="BreakTime";
       stateSwitch=0;
-      m=document.getElementById("Time").innerHTML;
+      m=document.getElementById("pomoTime").innerHTML;
       s=0;
+
+      audio.play();
     }
     else if (stateSwitch===0){
       state="Session";
       stateSwitch=1;
-      m=mainM;
+      m=document.getElementById("mainTime").innerHTML;
       s=0;
+      audio.play();
 
     }
   }
 
-  document.getElementById("showTime").innerHTML = state+"-"+m+":"+s;
+  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
 
 }
 
 function theMinus(id){
-  if(parseInt(document.getElementById(id).innerHTML)>0){
-  number = parseInt(document.getElementById(id).innerHTML)- 1;
-  document.getElementById(id).innerHTML = number;
+  if(parseInt(document.getElementById(id).innerHTML)>1){
+  document.getElementById(id).innerHTML = number = parseInt(document.getElementById(id).innerHTML)- 1;
 }else if(parseInt(document.getElementById(id).innerHTML)<=0){document.getElementById(id).innerHTML = 1;}}
 
 function thePlus(id){
-  if(parseInt(document.getElementById(id).innerHTML)>0){
-  number = parseInt(document.getElementById(id).innerHTML)+ 1;
-  document.getElementById(id).innerHTML = number;
-}else if(parseInt(document.getElementById(id).innerHTML)<=0){document.getElementById(id).innerHTML = 1;}}
+  document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+ 1;
+
+}
 
 function reset(){
+  clearInterval(globalTimer);
+  globalTimer = setInterval(mainTime, 100);
+  stateSwitch=1;
+  state="Session";
   m = document.getElementById("mainTime").innerHTML;
   s = 0;
   document.getElementById("showTime").innerHTML = state+"-"+m+":"+s;
-}
-
-setInterval(mainTime, 1000);
-//nest global variables inside function before finished, setinterval reset timer with RESET function
+  }
