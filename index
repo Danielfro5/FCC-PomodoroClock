@@ -16,15 +16,15 @@
 </head>
 <body>
 <p id="showTime"></p>
-<button id="minusMain" class="btn" onclick="theMinus('mainTime',mainM)">-</button>
-<button id="plusMain" class="btn" onclick="thePlus('mainTime',mainM)">+</button>
+<button id="minusMain" class="btn" onclick="theMinus('mainTime'),reset()">-</button>
+<button id="plusMain" class="btn" onclick="thePlus('mainTime'),reset()">+</button>
 <p id="mainTime"></p>
 
 
-<button id="minusBreak" class="btn" onclick="theMinus('pomoTime',pomoM)">-</button>
-<button id="plusBreak" class="btn" onclick="thePlus('pomoTime',pomoM)">+</button>
+<button id="minusBreak" class="btn" onclick="theMinus('pomoTime')">-</button>
+<button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
 <p id="pomoTime"></p>
-<button class="btn">START/RESET</button>
+<button class="btn" onclick="reset()">START/RESET</button>
 
 </body>
 </html>
