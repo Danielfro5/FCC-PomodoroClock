@@ -20,15 +20,17 @@
 <div id="bottom" class="container col-sm-3">
 
   <p id="showTime"></p>
-  <button class="btn" onclick="reset()">START/RESET</button>
+
+
 
   <div class="wrap row settingsBar">
-    <button id="minusMain" class="btn" onclick="theMinus('mainTime')">-</button>
+    <a class="btn btn1" onclick="reset()">START/RESET</a>
+    <a id="minusMain" class="btn btn2" onclick="theMinus('mainTime')">-</a>
     <p id="mainTime"></p>
-    <button id="plusMain" class="btn" onclick="thePlus('mainTime')">+</button>
-    <button id="minusBreak" class="btn" onclick="theMinus('pomoTime')">-</button>
+    <a id="plusMain" class="btn btn2" onclick="thePlus('mainTime')">+</a>
+    <a id="minusBreak" class="btn btn2" onclick="theMinus('pomoTime')">-</a>
     <p id="pomoTime"></p>
-    <button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
+    <a id="plusBreak" class="btn btn2" onclick="thePlus('pomoTime')">+</a>
       <p class="topFont">Session Time &emsp;&emsp; Break Time</p>
   </div>
   </div>
