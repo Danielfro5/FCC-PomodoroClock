@@ -1,21 +1,47 @@
+
+
 div{
   text-align: center;
-}
-#top{
+  font-family: Pacifico;
 
-background-color: #58fff5;
-
-}
-#bottom{
-  background-color: #1f5f77;
-  display:block;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
 }
 
 body{
   background-image: url("bg.jpeg");
   background-size:     cover;
   background-repeat:   no-repeat;
+}
+
+h1{
+  padding-top: 30px;
+  /*h1 make bigger font size*/
+}
+
+#bottom{
+  font-size: 30px;
+  background-color: #82ecff;
+
+}
+
+
+
+.btn{
+  font-family: Pacifico;
+  background: rgba(0,0,0,0.0);
+
+}
+.btn-hover{
+  background: rgba(0,0,0,0.5);
+}
+
+.topFont{
+ font-size: 15px;
+}
+
+.wrap {
+     display: flex;
+     justify-content: center;
+   }
+.settingsBar{
+  background-color: rgba(77, 255, 110,0.6);
 }

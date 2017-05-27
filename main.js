@@ -7,7 +7,7 @@ var globalTimer = setInterval(mainTime, 1000);
 window.onload = function(){
   document.getElementById("mainTime").innerHTML = 10;
   document.getElementById("pomoTime").innerHTML = 5;
-  document.getElementById("showTime").innerHTML = state+"</br>"+"00"+":"+"00"+"</br>START/RESET";
+  document.getElementById("showTime").innerHTML = state+"</br>"+"00"+":"+"00";
   clearInterval(globalTimer);
 
 };
@@ -27,7 +27,7 @@ function mainTime(){
       stateSwitch=0;
       m=document.getElementById("pomoTime").innerHTML;
       s=0;
-      document.getElementById("bottom").style.backgroundColor = "#36585b";
+      document.getElementById("bottom").style.backgroundColor = "#82ecff";
 
       audio.play();
     }
@@ -42,7 +42,7 @@ function mainTime(){
     }
   }
 
-  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s+"</br>START/RESET";
+  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
 
 }
 
@@ -63,7 +63,7 @@ function reset(){
   state="Session";
   m = document.getElementById("mainTime").innerHTML;
   s = 0;
-  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s+"</br>START/RESET";
+  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
   document.getElementById("bottom").style.backgroundColor = "#25b9f0";
   }
 

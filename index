@@ -10,30 +10,29 @@
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <title>Build A Pomodoro Clock</title>
 
 </head>
 <body>
 <div class="container">
-<div id="top" class="container col-sm-3">
+<h1>Pomodoro Clock</h1>
+<div id="bottom" class="container col-sm-3">
 
-<div class="row">
-<p>SESSION TIME BREAK TIME</p>
-</div>
+  <p id="showTime"></p>
+  <button class="btn" onclick="reset()">START/RESET</button>
 
-<div class="row">
-<button id="minusMain" class="btn" onclick="theMinus('mainTime'),reset()">-</button>
-<p id="mainTime"></p>
-<button id="plusMain" class="btn" onclick="thePlus('mainTime'),reset()">+</button>
-<button id="minusBreak" class="btn" onclick="theMinus('pomoTime')">-</button>
-<p id="pomoTime"></p>
-<button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
-</div>
-</div>
+  <div class="wrap row settingsBar">
+    <button id="minusMain" class="btn" onclick="theMinus('mainTime')">-</button>
+    <p id="mainTime"></p>
+    <button id="plusMain" class="btn" onclick="thePlus('mainTime')">+</button>
+    <button id="minusBreak" class="btn" onclick="theMinus('pomoTime')">-</button>
+    <p id="pomoTime"></p>
+    <button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
+      <p class="topFont">Session Time &emsp;&emsp; Break Time</p>
+  </div>
+  </div>
 
-<button id="bottom" class="container col-sm-3" onclick="">
-<p id="showTime"></p></button>
 
 
 
