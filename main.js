@@ -1,73 +1,70 @@
 var state = "Session";
 var stateSwitch = 1;
-var m=10;
-var s=1;
+var m = 10;
+var s = 1;
 var globalTimer = setInterval(mainTime, 1000);
 clearInterval(globalTimer);
-window.onload = function(){
-  document.getElementById("mainTime").innerHTML = 10;
-  document.getElementById("pomoTime").innerHTML = 5;
-  document.getElementById("showTime").innerHTML = state+"</br>"+"00"+":"+"00";
+window.onload = function() {
+    document.getElementById("mainTime").innerHTML = 10;
+    document.getElementById("pomoTime").innerHTML = 5;
+    document.getElementById("showTime").innerHTML = state + "</br>" + "00" + ":" + "00";
 
 
 };
 
-function mainTime(){
-  var audio = new Audio('bell.mp3');
+function mainTime() {
+    var audio = new Audio('bell.mp3');
 
-  s-=1;
-  if(s<0){
-    m-=1;
-    s=59;
-  }
-
-  if(m<0){
-    if (stateSwitch===1){
-      state="BreakTime";
-      stateSwitch=0;
-      m=document.getElementById("pomoTime").innerHTML;
-      s=0;
-      document.getElementById("bottom").style.backgroundColor = "#82ecff";
-
-      audio.play();
+    s -= 1;
+    if (s < 0) {
+        m -= 1;
+        s = 59;
     }
-    else if (stateSwitch===0){
-      state="Session";
-      stateSwitch=1;
-      m=document.getElementById("mainTime").innerHTML;
-      s=0;
-      audio.play();
-      document.getElementById("bottom").style.backgroundColor = "#25b9f0";
 
+    if (m < 0) {
+        if (stateSwitch === 1) {
+            state = "BreakTime";
+            stateSwitch = 0;
+            m = document.getElementById("pomoTime").innerHTML;
+            s = 0;
+            document.getElementById("bottom").style.backgroundColor = "#82ecff";
+
+            audio.play();
+        } else if (stateSwitch === 0) {
+            state = "Session";
+            stateSwitch = 1;
+            m = document.getElementById("mainTime").innerHTML;
+            s = 0;
+            audio.play();
+            document.getElementById("bottom").style.backgroundColor = "#25b9f0";
+
+        }
     }
-  }
 
-  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
+    document.getElementById("showTime").innerHTML = state + "</br>" + m + ":" + s;
 
 }
 
-function theMinus(id){
-  if(parseInt(document.getElementById(id).innerHTML)>1){
-  document.getElementById(id).innerHTML = number = parseInt(document.getElementById(id).innerHTML)- 1;
-}else if(parseInt(document.getElementById(id).innerHTML)<=0){document.getElementById(id).innerHTML = 1;}}
+function theMinus(id) {
+    if (parseInt(document.getElementById(id).innerHTML) > 1) {
+        document.getElementById(id).innerHTML = number = parseInt(document.getElementById(id).innerHTML) - 1;
+    } else if (parseInt(document.getElementById(id).innerHTML) <= 0) {
+        document.getElementById(id).innerHTML = 1;
+    }
+}
 
-function thePlus(id){
-  document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML)+ 1;
+function thePlus(id) {
+    document.getElementById(id).innerHTML = parseInt(document.getElementById(id).innerHTML) + 1;
 
 }
 
-function reset(){
-  clearInterval(globalTimer);
-  globalTimer = setInterval(mainTime, 1000);
-  stateSwitch=1;
-  state="Session";
-  m = document.getElementById("mainTime").innerHTML;
-  s = 0;
-  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
-  document.getElementById("bottom").style.backgroundColor = "#25b9f0";
-  }
-
-
-
-
-//timer doesnt seem to run in background
+function reset() {
+    clearInterval(globalTimer);
+    globalTimer = setInterval(mainTime, 1000);
+    stateSwitch = 1;
+    state = "Session";
+    m = document.getElementById("mainTime").innerHTML;
+    s = 0;
+    document.getElementById("showTime").innerHTML = state + "</br>" + m + ":" + s;
+    document.getElementById("bottom").style.backgroundColor = "#25b9f0";
+}

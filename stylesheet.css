@@ -1,60 +1,57 @@
-div{
-  text-align: center;
-  font-family: Pacifico;
-
+div {
+    text-align: center;
+    font-family: Pacifico;
 }
 
-body{
-  background-image: url("bg.jpeg");
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:     cover;
-
+body {
+    background-image: url("bg.jpeg");
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-h1{
-  padding-top: 30px;
+h1 {
+    padding-top: 30px;
 }
 
-#bottom{
-  font-size: 30px;
-  background-color: #82ecff;
-
+#bottom {
+    font-size: 30px;
+    background-color: #82ecff;
 }
-.topFont{
- font-size: 15px;
+
+.topFont {
+    font-size: 15px;
 }
 
 .wrap {
-     display: flex;
-     justify-content: center;
-   }
-.settingsBar{
-  background-color: rgba(77, 255, 110,0.6);
+    display: flex;
+    justify-content: center;
 }
 
-.btn1{
-  background-color: rgba(255, 103, 85,0.6);
-  width: 100%;
-  border-radius: 0 !important;
-  height:40px;
-
+.settingsBar {
+    background-color: rgba(77, 255, 110, 0.6);
 }
 
+.btn1 {
+    background-color: rgba(255, 103, 85, 0.6);
+    width: 100%;
+    border-radius: 0 !important;
+    height: 40px;
+}
 
 .btn1:hover {
-  background-color: rgb(255, 116, 56);
-  font-size: 20px;
+    background-color: rgb(255, 116, 56);
+    font-size: 20px;
 }
+
 .btn1:active {
-  background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .btn2:hover {
-  font-size: 30px;
+    font-size: 30px;
 }
-.btn2:active {
 
-}
+.btn2:active {}
