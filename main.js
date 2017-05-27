@@ -7,6 +7,7 @@ var globalTimer = setInterval(mainTime, 1000);
 window.onload = function(){
   document.getElementById("mainTime").innerHTML = 10;
   document.getElementById("pomoTime").innerHTML = 5;
+  document.getElementById("showTime").innerHTML = state+"</br>"+"00"+":"+"00"+"</br>START/RESET";
   clearInterval(globalTimer);
 
 };
@@ -26,6 +27,7 @@ function mainTime(){
       stateSwitch=0;
       m=document.getElementById("pomoTime").innerHTML;
       s=0;
+      document.getElementById("bottom").style.backgroundColor = "#36585b";
 
       audio.play();
     }
@@ -35,11 +37,12 @@ function mainTime(){
       m=document.getElementById("mainTime").innerHTML;
       s=0;
       audio.play();
+      document.getElementById("bottom").style.backgroundColor = "#25b9f0";
 
     }
   }
 
-  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s;
+  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s+"</br>START/RESET";
 
 }
 
@@ -60,5 +63,11 @@ function reset(){
   state="Session";
   m = document.getElementById("mainTime").innerHTML;
   s = 0;
-  document.getElementById("showTime").innerHTML = state+"-"+m+":"+s;
+  document.getElementById("showTime").innerHTML = state+"</br>"+m+":"+s+"</br>START/RESET";
+  document.getElementById("bottom").style.backgroundColor = "#25b9f0";
   }
+
+
+
+
+//timer doesnt seem to run in background

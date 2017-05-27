@@ -15,16 +15,28 @@
 
 </head>
 <body>
-<p id="showTime"></p>
+<div class="container">
+<div id="top" class="container col-sm-3">
+
+<div class="row">
+<p>SESSION TIME BREAK TIME</p>
+</div>
+
+<div class="row">
 <button id="minusMain" class="btn" onclick="theMinus('mainTime'),reset()">-</button>
-<button id="plusMain" class="btn" onclick="thePlus('mainTime'),reset()">+</button>
 <p id="mainTime"></p>
-
-
+<button id="plusMain" class="btn" onclick="thePlus('mainTime'),reset()">+</button>
 <button id="minusBreak" class="btn" onclick="theMinus('pomoTime')">-</button>
-<button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
 <p id="pomoTime"></p>
-<button class="btn" onclick="reset()">START/RESET</button>
+<button id="plusBreak" class="btn" onclick="thePlus('pomoTime')">+</button>
+</div>
+</div>
 
+<button id="bottom" class="container col-sm-3" onclick="">
+<p id="showTime"></p></button>
+
+
+
+</div>
 </body>
 </html>

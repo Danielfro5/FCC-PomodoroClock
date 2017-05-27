@@ -1,0 +1,21 @@
+div{
+  text-align: center;
+}
+#top{
+
+background-color: #58fff5;
+
+}
+#bottom{
+  background-color: #1f5f77;
+  display:block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+body{
+  background-image: url("bg.jpeg");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+}
