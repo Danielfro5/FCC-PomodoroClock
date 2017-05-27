@@ -3,12 +3,12 @@ var stateSwitch = 1;
 var m=10;
 var s=1;
 var globalTimer = setInterval(mainTime, 1000);
-
+clearInterval(globalTimer);
 window.onload = function(){
   document.getElementById("mainTime").innerHTML = 10;
   document.getElementById("pomoTime").innerHTML = 5;
   document.getElementById("showTime").innerHTML = state+"</br>"+"00"+":"+"00";
-  clearInterval(globalTimer);
+
 
 };
 
