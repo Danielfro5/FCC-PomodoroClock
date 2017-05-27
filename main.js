@@ -58,7 +58,7 @@ function thePlus(id){
 
 function reset(){
   clearInterval(globalTimer);
-  globalTimer = setInterval(mainTime, 100);
+  globalTimer = setInterval(mainTime, 1000);
   stateSwitch=1;
   state="Session";
   m = document.getElementById("mainTime").innerHTML;
