@@ -16,23 +16,30 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="strictWidth">
         <h1>Pomodoro Clock</h1>
-        <div id="bottom" class="container col-sm-3">
+        <div id="bottom" class="container col-sm-12">
 
             <p id="showTime"></p>
 
 
 
             <div class="wrap row settingsBar">
+
                 <a class="btn btn1" onclick="reset()">START/RESET</a>
-                <a id="minusMain" class="btn btn2" onclick="theMinus('mainTime')">-</a>
-                <p id="mainTime"></p>
-                <a id="plusMain" class="btn btn2" onclick="thePlus('mainTime')">+</a>
-                <a id="minusBreak" class="btn btn2" onclick="theMinus('pomoTime')">-</a>
-                <p id="pomoTime"></p>
-                <a id="plusBreak" class="btn btn2" onclick="thePlus('pomoTime')">+</a>
-                <p class="topFont">Session Time &emsp;&emsp; Break Time</p>
+
+            <div class="row">
+                  <a id="minusMain" class="btn btn2" onclick="theMinus('mainTime')">-</a>
+                  <p id="mainTime"></p>
+                  <a id="plusMain" class="btn btn2" onclick="thePlus('mainTime')">+</a>
+                  <a id="minusBreak" class="btn btn2" onclick="theMinus('pomoTime')">-</a>
+                  <p id="pomoTime"></p>
+                  <a id="plusBreak" class="btn btn2" onclick="thePlus('pomoTime')">+</a>
+            </div>
+
+            <div class="row">
+                  <p class="topFont">Session Time &emsp;&emsp; Break Time</p>
+            </div>
             </div>
         </div>
 
