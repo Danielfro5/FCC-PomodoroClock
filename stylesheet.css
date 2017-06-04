@@ -28,7 +28,7 @@ h1 {
 }
 
 .wrap {
-
+    display: flex;
     justify-content: center;
 }
 
